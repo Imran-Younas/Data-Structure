@@ -1,0 +1,68 @@
+#include <iostream>
+using namespace std;
+class arr
+{
+public:
+  int a[20];
+  int *ptr;
+  
+  arr(){ptr = &a[0];}
+
+  void insert (int val)
+  {
+    
+    *ptr = val;
+    ptr++;
+    
+
+  }
+  
+  void print(){
+    int count = 0;  
+    ptr =  & a[0]; 
+    while(count != 7){
+        cout << *ptr << " ";
+        ptr++;
+        
+        count++;
+        
+    }
+ 
+  }
+  
+  void odddd(){
+      cout << endl;
+    int count = 0;  
+    ptr =  & a[0]; 
+    while(count != 7){
+        
+        if(*ptr % 2 == 1){
+        cout << *ptr << " ";
+        }
+        ptr++;
+        
+        count++;
+        
+    }
+  }
+      
+  
+};
+
+int
+main ()
+{
+  arr a;
+  a.insert (2);
+   a.insert (3);
+    a.insert (4);
+     a.insert (5);
+     a.insert (6);
+     a.insert (7);
+     a.insert (8);
+   a.print();
+   
+   a.odddd();
+}
+
+
